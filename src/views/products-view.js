@@ -15,7 +15,7 @@ class ProductsView extends LitElement {
   render() {
     return html`
       <div class="header-container">
-        <img src="/public/fondo_productos.jpg" alt="Encabezado de Productos" />
+        <img src="https://thumbs.dreamstime.com/b/inscription-software-testing-virtual-display-business-modern-technology-internet-networking-concept-172967597.jpg" alt="Encabezado de Productos" />
       </div>
     `;
   }

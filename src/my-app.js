@@ -32,7 +32,7 @@ class MyApp extends LitElement {
     return html`
     <header>
         <div class="logo">
-            <img src="/public/logo.png" alt="Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Logo">
         </div>
         
         <sl-button-group label="Alignment">

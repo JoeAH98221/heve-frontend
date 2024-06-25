@@ -40,28 +40,28 @@ class HomeView extends LitElement {
             <img
               class="carousel-img"
               alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
-              src="/public/testing_1.jpg"
+              src="https://adrianalonso.es/wp-content/uploads/2017/06/testing.jpg"
             />
           </sl-carousel-item>
           <sl-carousel-item>
             <img
               class="carousel-img"
               alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
-              src="/public/testing_2.png"
+              src="https://adictosaltrabajo.com/wp-content/uploads/2019/12/testing-en-un-mundo-agile.png"
             />
           </sl-carousel-item>
           <sl-carousel-item>
             <img
               class="carousel-img"
               alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
-              src="/public/testing_3.png"
+              src="https://media.telefonicatech.com/telefonicatech/uploads/2021/1/7261_testing.jpg"
             />
           </sl-carousel-item>
           <sl-carousel-item>
             <img
               class="carousel-img"
               alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
-              src="/public/testing_4.jpg"
+              src="https://www.fitaacademy.in/includes/assets/img/blog/software-testing.jpg"
             />
           </sl-carousel-item>
         </sl-carousel>
