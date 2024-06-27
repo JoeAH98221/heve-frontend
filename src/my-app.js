@@ -46,11 +46,11 @@ class MyApp extends LitElement {
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Logo">
         </div>
         <sl-button-group label="Alignment">
-          <sl-button size="large" @click=${() => this._navigate('home')}>INICIO</sl-button>
-          <sl-button size="large" @click=${() => this._navigate('about')}>NOSOTROS</sl-button>
-          <sl-button size="large" @click=${() => this._navigate('services')}>SERVICIOS</sl-button>
-          <sl-button size="large" @click=${() => this._navigate('products')}>PRODUCTOS</sl-button>
-          <sl-button size="large" @click=${() => this._navigate('contact')}>CONTACTO</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('home')}>INICIO</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('about')}>NOSOTROS</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('services')}>SERVICIOS</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('products')}>PRODUCTOS</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('contact')}>CONTACTO</sl-button>
         </sl-button-group>
       </header>
       <main>
