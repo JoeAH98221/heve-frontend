@@ -13,17 +13,17 @@ class MyApp extends LitElement {
       align-items: center;
       padding: 10px;
       border-bottom: 1px solid #ccc;
-      position: fixed; /* Fija el header */
-      width: 98%; /* Asegura que el header ocupe todo el ancho */
-      top: 0; /* Posiciona el header en la parte superior */
-      background: white; /* Fondo blanco para el header */
-      z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+      position: fixed;
+      width: 98%;
+      top: 0;
+      background: white;
+      z-index: 1000;
     }
     .logo img {
       max-height: 80px;
     }
     main {
-      margin-top: 100px; /* Añade margen superior para evitar que el contenido se superponga con el header */
+      margin-top: 100px;
     }
   `;
 
@@ -46,11 +46,11 @@ class MyApp extends LitElement {
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Logo">
         </div>
         <sl-button-group label="Alignment">
-          <sl-button size="large" href="#" @click=${() => this._navigate('home')}>INICIO</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('about')}>NOSOTROS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('services')}>SERVICIOS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('products')}>PRODUCTOS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('contact')}>CONTACTO</sl-button>
+          <sl-button size="large" @click=${() => this._navigate('home')}>INICIO</sl-button>
+          <sl-button size="large" @click=${() => this._navigate('about')}>NOSOTROS</sl-button>
+          <sl-button size="large" @click=${() => this._navigate('services')}>SERVICIOS</sl-button>
+          <sl-button size="large" @click=${() => this._navigate('products')}>PRODUCTOS</sl-button>
+          <sl-button size="large" @click=${() => this._navigate('contact')}>CONTACTO</sl-button>
         </sl-button-group>
       </header>
       <main>
