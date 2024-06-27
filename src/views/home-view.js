@@ -24,11 +24,21 @@ class HomeView extends LitElement {
     .card-overview small {
       color: var(--sl-color-neutral-500);
     }
-
     .card-overview [slot="footer"] {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .card-header {
+      max-width: 300px;
+    }
+    .card-header [slot="header"] {
+      display: flex;
+      align-items: center;
+      font-size: larger;
+    }
+    .card-header h3 {
+      margin: 0;
     }
   `;
 
@@ -66,101 +76,152 @@ class HomeView extends LitElement {
           </sl-carousel-item>
         </sl-carousel>
       </div>
+
       <div>
-        <h1 align='center'>ALGUNOS DE NUESTROS PRODUCTOS</h1>
+        <h1 align="center">ALGUNOS DE NUESTROS PRODUCTOS</h1>
       </div>
+
       <div class="card-items">
-        <sl-card class="card-overview">
-          <img
-            slot="image"
-            src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-            alt="A kitten sits patiently between a terracotta pot and decorative grasses."
-          />
-
-          <strong>Mittens</strong><br />
-          This kitten is as cute as he is playful. Bring him home today!<br />
-          <small>6 weeks old</small>
-
-          <div slot="footer">
-            <sl-button variant="primary" pill>More Info</sl-button>
-          </div>
+        <sl-card class="card-header">
+          <div slot="header"><b>CONCRETO</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              Equipos y servicios especializados para el ensayo y verificación
+              de la calidad del concreto, incluyendo pruebas de resistencia,
+              durabilidad y consistencia, asegurando que cumpla con los
+              estándares nacionales e internacionales.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
         </sl-card>
-        <sl-card class="card-overview">
-          <img
-            slot="image"
-            src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-            alt="A kitten sits patiently between a terracotta pot and decorative grasses."
-          />
 
-          <strong>Mittens</strong><br />
-          This kitten is as cute as he is playful. Bring him home today!<br />
-          <small>6 weeks old</small>
-
-          <div slot="footer">
-            <sl-button variant="primary" pill>More Info</sl-button>
-          </div>
+        <sl-card class="card-header">
+          <div slot="header"><b>SUELOS</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              Instrumentación y tecnología para la caracterización y análisis de
+              suelos. Incluye pruebas de compactación, permeabilidad, y
+              resistencia para garantizar la calidad y estabilidad en proyectos
+              de construcción.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
         </sl-card>
-        <sl-card class="card-overview">
-          <img
-            slot="image"
-            src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-            alt="A kitten sits patiently between a terracotta pot and decorative grasses."
-          />
 
-          <strong>Mittens</strong><br />
-          This kitten is as cute as he is playful. Bring him home today!<br />
-          <small>6 weeks old</small>
-
-          <div slot="footer">
-            <sl-button variant="primary" pill>More Info</sl-button>
-          </div>
+        <sl-card class="card-header">
+          <div slot="header"><b>CEMENTO</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              Equipos para ensayos de calidad y resistencia del cemento, desde
+              su estado fresco hasta su endurecimiento. Incluye análisis
+              químicos y físicos para asegurar la conformidad con normas
+              establecidas.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
         </sl-card>
       </div>
+
       <div class="card-items">
-        <sl-card class="card-overview">
-          <img
-            slot="image"
-            src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-            alt="A kitten sits patiently between a terracotta pot and decorative grasses."
-          />
-
-          <strong>Mittens</strong><br />
-          This kitten is as cute as he is playful. Bring him home today!<br />
-          <small>6 weeks old</small>
-
-          <div slot="footer">
-            <sl-button variant="primary" pill>More Info</sl-button>
-          </div>
+        <sl-card class="card-header">
+          <div slot="header"><b>ASFALTOS</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              Soluciones para el ensayo y control de calidad de mezclas
+              asfálticas. Incluye pruebas de viscosidad, densidad, y resistencia
+              para asegurar la durabilidad y desempeño en pavimentación.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
         </sl-card>
-        <sl-card class="card-overview">
-          <img
-            slot="image"
-            src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-            alt="A kitten sits patiently between a terracotta pot and decorative grasses."
-          />
 
-          <strong>Mittens</strong><br />
-          This kitten is as cute as he is playful. Bring him home today!<br />
-          <small>6 weeks old</small>
-
-          <div slot="footer">
-            <sl-button variant="primary" pill>More Info</sl-button>
-          </div>
+        <sl-card class="card-header">
+          <div slot="header"><b>AGREGADOS</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              Equipos para la evaluación de propiedades físicas y mecánicas de
+              agregados utilizados en la construcción. Incluye análisis
+              granulométricos, resistencia al desgaste y ensayos de limpieza.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
         </sl-card>
-        <sl-card class="card-overview">
-          <img
-            slot="image"
-            src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-            alt="A kitten sits patiently between a terracotta pot and decorative grasses."
-          />
 
-          <strong>Mittens</strong><br />
-          This kitten is as cute as he is playful. Bring him home today!<br />
-          <small>6 weeks old</small>
+        <sl-card class="card-header">
+          <div slot="header"><b>GENERALES</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              Instrumentos y servicios de laboratorio para pruebas diversas que
+              no encajan específicamente en las otras categorías, pero que son
+              esenciales para asegurar la calidad en diversos materiales de
+              construcción.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
+        </sl-card>
+      </div>
 
-          <div slot="footer">
-            <sl-button variant="primary" pill>More Info</sl-button>
-          </div>
+      <div class="card-items">
+        <sl-card class="card-header">
+          <div slot="header"><b>ACEROS</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              Equipos y tecnología para la prueba de calidad y resistencia de
+              aceros utilizados en la construcción. Incluye ensayos de tracción,
+              flexión, y análisis de composición química para garantizar el
+              cumplimiento con normas y especificaciones.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
         </sl-card>
       </div>
     `;
