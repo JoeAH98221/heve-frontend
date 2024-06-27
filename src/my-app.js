@@ -33,7 +33,10 @@ class MyApp extends LitElement {
 
   constructor() {
     super();
-    this.page = 'home';
+    this.page = this._getPageFromUrl();
+    window.onpopstate = () => {
+      this.page = this._getPageFromUrl();
+    };
   }
 
   render() {
@@ -42,13 +45,12 @@ class MyApp extends LitElement {
         <div class="logo">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Logo">
         </div>
-        
         <sl-button-group label="Alignment">
-          <sl-button size="large" href="#" @click=${() => this.page = 'home'}>INICIO</sl-button>
-          <sl-button size="large" href="#" @click=${() => this.page = 'about'}>NOSOTROS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this.page = 'services'}>SERVICIOS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this.page = 'products'}>PRODUCTOS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this.page = 'contact'}>CONTACTO</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('home')}>INICIO</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('about')}>NOSOTROS</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('services')}>SERVICIOS</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('products')}>PRODUCTOS</sl-button>
+          <sl-button size="large" href="#" @click=${() => this._navigate('contact')}>CONTACTO</sl-button>
         </sl-button-group>
       </header>
       <main>
@@ -57,8 +59,18 @@ class MyApp extends LitElement {
     `;
   }
 
+  _getPageFromUrl() {
+    const path = window.location.pathname;
+    return path === '/' ? 'home' : path.slice(1);
+  }
+
+  _navigate(page) {
+    this.page = page;
+    window.history.pushState({}, '', `/${page}`);
+  }
+
   _renderPage() {
-    switch(this.page) {
+    switch (this.page) {
       case 'home':
         return html`<home-view></home-view>`;
       case 'about':
