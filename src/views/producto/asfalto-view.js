@@ -1,15 +1,12 @@
 import { LitElement, html, css } from "lit";
 
-class HomeView extends LitElement {
+class AsfaltoView extends LitElement {
   static styles = css`
-    .carousel-container {
-      max-width: 600px; /* Ajusta el ancho del carrusel */
-      margin: 0 auto; /* Centra el carrusel horizontalmente */
-    }
-    .carousel-img {
-      width: 100%; /* Puedes ajustar el tamaño según tus necesidades */
-      height: auto; /* Mantiene la proporción de la imagen */
-      max-height: 250px;
+    .content {
+      text-align: center; /* Centra el texto */
+      margin: 0px auto; /* Añade un margen para separarlo del contenido superior */
+      padding: 0 20px; /* Añade espacio a ambos lados del texto */
+      max-width: 1000px; /* Limita el ancho máximo del contenido */
     }
     .card-items {
       display: flex;
@@ -44,46 +41,14 @@ class HomeView extends LitElement {
 
   render() {
     return html`
-      <div class="carousel-container">
-        <sl-carousel navigation autoplay loop>
-          <sl-carousel-item>
-            <img
-              class="carousel-img"
-              alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
-              src="https://adrianalonso.es/wp-content/uploads/2017/06/testing.jpg"
-            />
-          </sl-carousel-item>
-          <sl-carousel-item>
-            <img
-              class="carousel-img"
-              alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
-              src="https://adictosaltrabajo.com/wp-content/uploads/2019/12/testing-en-un-mundo-agile.png"
-            />
-          </sl-carousel-item>
-          <sl-carousel-item>
-            <img
-              class="carousel-img"
-              alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
-              src="https://media.telefonicatech.com/telefonicatech/uploads/2021/1/7261_testing.jpg"
-            />
-          </sl-carousel-item>
-          <sl-carousel-item>
-            <img
-              class="carousel-img"
-              alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
-              src="https://www.fitaacademy.in/includes/assets/img/blog/software-testing.jpg"
-            />
-          </sl-carousel-item>
-        </sl-carousel>
+      <div class="content">
+        Soluciones para el ensayo y control de calidad de mezclas asfálticas.
+        Incluye pruebas de viscosidad, densidad, y resistencia para asegurar la
+        durabilidad y desempeño en pavimentación.
       </div>
-
-      <div>
-        <h1 align="center">ALGUNOS DE NUESTROS PRODUCTOS</h1>
-      </div>
-
       <div class="card-items">
         <sl-card class="card-header">
-          <div slot="header"><b>CONCRETO</b></div>
+          <div slot="header"><b>PRODUCTO 1</b></div>
           <sl-card class="card-overview">
             <img
               slot="image"
@@ -91,10 +56,8 @@ class HomeView extends LitElement {
               alt="A kitten sits patiently between a terracotta pot and decorative grasses."
             />
             <div style="text-align: justify;">
-              Equipos y servicios especializados para el ensayo y verificación
-              de la calidad del concreto, incluyendo pruebas de resistencia,
-              durabilidad y consistencia, asegurando que cumpla con los
-              estándares nacionales e internacionales.
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
             </div>
             <div slot="footer">
               <sl-button variant="primary" pill>More Info</sl-button>
@@ -103,7 +66,7 @@ class HomeView extends LitElement {
         </sl-card>
 
         <sl-card class="card-header">
-          <div slot="header"><b>SUELOS</b></div>
+          <div slot="header"><b>PRODUCTO 2</b></div>
           <sl-card class="card-overview">
             <img
               slot="image"
@@ -111,10 +74,8 @@ class HomeView extends LitElement {
               alt="A kitten sits patiently between a terracotta pot and decorative grasses."
             />
             <div style="text-align: justify;">
-              Instrumentación y tecnología para la caracterización y análisis de
-              suelos. Incluye pruebas de compactación, permeabilidad, y
-              resistencia para garantizar la calidad y estabilidad en proyectos
-              de construcción.
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
             </div>
             <div slot="footer">
               <sl-button variant="primary" pill>More Info</sl-button>
@@ -123,7 +84,7 @@ class HomeView extends LitElement {
         </sl-card>
 
         <sl-card class="card-header">
-          <div slot="header"><b>CEMENTO</b></div>
+          <div slot="header"><b>PRODUCTO 3</b></div>
           <sl-card class="card-overview">
             <img
               slot="image"
@@ -131,31 +92,8 @@ class HomeView extends LitElement {
               alt="A kitten sits patiently between a terracotta pot and decorative grasses."
             />
             <div style="text-align: justify;">
-              Equipos para ensayos de calidad y resistencia del cemento, desde
-              su estado fresco hasta su endurecimiento. Incluye análisis
-              químicos y físicos para asegurar la conformidad con normas
-              establecidas.
-            </div>
-            <div slot="footer">
-              <sl-button variant="primary" pill>More Info</sl-button>
-            </div>
-          </sl-card>
-        </sl-card>
-      </div>
-
-      <div class="card-items">
-        <sl-card class="card-header">
-          <div slot="header"><b>ASFALTO</b></div>
-          <sl-card class="card-overview">
-            <img
-              slot="image"
-              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
-            />
-            <div style="text-align: justify;">
-              Soluciones para el ensayo y control de calidad de mezclas
-              asfálticas. Incluye pruebas de viscosidad, densidad, y resistencia
-              para asegurar la durabilidad y desempeño en pavimentación.
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
             </div>
             <div slot="footer">
               <sl-button variant="primary" pill>More Info</sl-button>
@@ -164,7 +102,7 @@ class HomeView extends LitElement {
         </sl-card>
 
         <sl-card class="card-header">
-          <div slot="header"><b>AGREGADOS</b></div>
+          <div slot="header"><b>PRODUCTO 4</b></div>
           <sl-card class="card-overview">
             <img
               slot="image"
@@ -172,9 +110,8 @@ class HomeView extends LitElement {
               alt="A kitten sits patiently between a terracotta pot and decorative grasses."
             />
             <div style="text-align: justify;">
-              Equipos para la evaluación de propiedades físicas y mecánicas de
-              agregados utilizados en la construcción. Incluye análisis
-              granulométricos, resistencia al desgaste y ensayos de limpieza.
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
             </div>
             <div slot="footer">
               <sl-button variant="primary" pill>More Info</sl-button>
@@ -183,7 +120,7 @@ class HomeView extends LitElement {
         </sl-card>
 
         <sl-card class="card-header">
-          <div slot="header"><b>GENERALES</b></div>
+          <div slot="header"><b>PRODUCTO 5</b></div>
           <sl-card class="card-overview">
             <img
               slot="image"
@@ -191,21 +128,17 @@ class HomeView extends LitElement {
               alt="A kitten sits patiently between a terracotta pot and decorative grasses."
             />
             <div style="text-align: justify;">
-              Instrumentos y servicios de laboratorio para pruebas diversas que
-              no encajan específicamente en las otras categorías, pero que son
-              esenciales para asegurar la calidad en diversos materiales de
-              construcción.
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
             </div>
             <div slot="footer">
               <sl-button variant="primary" pill>More Info</sl-button>
             </div>
           </sl-card>
         </sl-card>
-      </div>
 
-      <div class="card-items">
         <sl-card class="card-header">
-          <div slot="header"><b>ACERO</b></div>
+          <div slot="header"><b>PRODUCTO 6</b></div>
           <sl-card class="card-overview">
             <img
               slot="image"
@@ -213,10 +146,44 @@ class HomeView extends LitElement {
               alt="A kitten sits patiently between a terracotta pot and decorative grasses."
             />
             <div style="text-align: justify;">
-              Equipos y tecnología para la prueba de calidad y resistencia de
-              aceros utilizados en la construcción. Incluye ensayos de tracción,
-              flexión, y análisis de composición química para garantizar el
-              cumplimiento con normas y especificaciones.
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
+        </sl-card>
+
+        <sl-card class="card-header">
+          <div slot="header"><b>PRODUCTO 7</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
+            </div>
+            <div slot="footer">
+              <sl-button variant="primary" pill>More Info</sl-button>
+            </div>
+          </sl-card>
+        </sl-card>
+
+        <sl-card class="card-header">
+          <div slot="header"><b>PRODUCTO 8</b></div>
+          <sl-card class="card-overview">
+            <img
+              slot="image"
+              src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            />
+            <div style="text-align: justify;">
+              El trozo de texto estándar de Lorem Ipsum usado desde el año 1500
+              es reproducido debajo para aquellos interesados.
             </div>
             <div slot="footer">
               <sl-button variant="primary" pill>More Info</sl-button>
@@ -228,4 +195,4 @@ class HomeView extends LitElement {
   }
 }
 
-customElements.define("home-view", HomeView);
+customElements.define("asfalto-view", AsfaltoView);

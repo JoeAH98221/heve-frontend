@@ -57,15 +57,33 @@ class ProductsView extends LitElement {
           <sl-tab slot="nav" panel="generales">GENERALES</sl-tab>
           <sl-tab slot="nav" panel="acero">ACERO</sl-tab>
 
-          <sl-tab-panel name="concreto"
-            >This is the concreto tab panel.</sl-tab-panel
-          >
-          <sl-tab-panel name="suelos"
-            >This is the suelos tab panel.</sl-tab-panel
-          >
-          <sl-tab-panel name="cemento"
-            >This is the cemento tab panel.</sl-tab-panel
-          >
+          <sl-tab-panel name="concreto">
+            <concreto-view></concreto-view>
+          </sl-tab-panel>
+
+          <sl-tab-panel name="suelos">
+            <suelos-view></suelos-view>
+          </sl-tab-panel>
+
+          <sl-tab-panel name="cemento">
+            <cemento-view></cemento-view>
+          </sl-tab-panel>
+
+          <sl-tab-panel name="asfalto">
+            <asfalto-view></asfalto-view>
+          </sl-tab-panel>
+
+          <sl-tab-panel name="agregados">
+            <agregados-view></agregados-view>
+          </sl-tab-panel>
+
+          <sl-tab-panel name="generales">
+            <generales-view></generales-view>
+          </sl-tab-panel>
+
+          <sl-tab-panel name="acero">
+            <cemento-view></cemento-view>
+          </sl-tab-panel>
         </sl-tab-group>
       </div>
     `;
