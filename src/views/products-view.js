@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css } from "lit";
 
 class ProductsView extends LitElement {
   static styles = css`
@@ -8,17 +8,68 @@ class ProductsView extends LitElement {
     }
     .header-container img {
       width: 100%; /* Asegura que la imagen llene el contenedor */
-      height: auto; /* Mantiene la proporción de la imagen */
+      height: 350px; /* Mantiene la proporción de la imagen */
+    }
+    .content {
+      text-align: center; /* Centra el texto */
+      margin: 100px auto; /* Añade un margen para separarlo del contenido superior */
+      padding: 0 20px; /* Añade espacio a ambos lados del texto */
+      max-width: 1000px; /* Limita el ancho máximo del contenido */
+    }
+    sl-tab-group::part(nav) {
+      display: flex;
+      justify-content: center; /* Centra los elementos dentro del nav */
+      flex-wrap: wrap; /* Permite que los tabs se envuelvan si es necesario */
+    }
+    sl-tab::part(base) {
+      margin: 0 10px; /* Añade margen a cada tab para espaciarlo */
     }
   `;
 
   render() {
     return html`
       <div class="header-container">
-        <img src="https://thumbs.dreamstime.com/b/inscription-software-testing-virtual-display-business-modern-technology-internet-networking-concept-172967597.jpg" alt="Encabezado de Productos" />
+        <img
+          src="https://st.depositphotos.com/49078592/55273/i/1600/depositphotos_552735934-stock-photo-text-showing-inspiration-product-test.jpg"
+          alt="Encabezado de Productos"
+        />
+      </div>
+
+      <div class="content">
+        <p>
+          Contamos con más de <b>(INGRESE AÑOS)</b> años en el mercado
+          comercializando equipo para la verificación de calidad en los
+          materiales de construcción, siempre en cumplimiento de normas
+          nacionales e internacionales, con el fin de brindar seguridad,
+          confianza y tranquilidad a nuestros clientes en sus proyectos de
+          infraestructura y macroestructura. <br /><br />
+          Aquí encontrarás los equipos necesarios para pruebas de calidad en:
+        </p>
+      </div>
+
+      <div class="content">
+        <sl-tab-group>
+          <sl-tab slot="nav" panel="concreto">CONCRETO</sl-tab>
+          <sl-tab slot="nav" panel="suelos">SUELOS</sl-tab>
+          <sl-tab slot="nav" panel="cemento">CEMENTO</sl-tab>
+          <sl-tab slot="nav" panel="asfalto">ASFALTO</sl-tab>
+          <sl-tab slot="nav" panel="agregados">AGREGADOS</sl-tab>
+          <sl-tab slot="nav" panel="generales">GENERALES</sl-tab>
+          <sl-tab slot="nav" panel="acero">ACERO</sl-tab>
+
+          <sl-tab-panel name="concreto"
+            >This is the concreto tab panel.</sl-tab-panel
+          >
+          <sl-tab-panel name="suelos"
+            >This is the suelos tab panel.</sl-tab-panel
+          >
+          <sl-tab-panel name="cemento"
+            >This is the cemento tab panel.</sl-tab-panel
+          >
+        </sl-tab-group>
       </div>
     `;
   }
 }
 
-customElements.define('products-view', ProductsView);
+customElements.define("products-view", ProductsView);
