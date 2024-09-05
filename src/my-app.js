@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
-import './views/home-view.js';
+import { initRouter } from './utilities/router.js';
+import './views/home-view.js'; // Importa las vistas correctamente
 import './views/about-view.js';
 import './views/services-view.js';
 import './views/products-view.js';
@@ -27,16 +28,9 @@ class MyApp extends LitElement {
     }
   `;
 
-  static properties = {
-    page: { type: String },
-  };
-
-  constructor() {
-    super();
-    this.page = this._getPageFromUrl();
-    window.onpopstate = () => {
-      this.page = this._getPageFromUrl();
-    };
+  firstUpdated() {
+    const outlet = this.shadowRoot.querySelector('main');
+    initRouter(outlet);
   }
 
   render() {
@@ -46,44 +40,15 @@ class MyApp extends LitElement {
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Logo">
         </div>
         <sl-button-group label="Alignment">
-          <sl-button size="large" href="#" @click=${() => this._navigate('home')}>INICIO</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('about')}>NOSOTROS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('services')}>SERVICIOS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('products')}>PRODUCTOS</sl-button>
-          <sl-button size="large" href="#" @click=${() => this._navigate('contact')}>CONTACTO</sl-button>
+          <sl-button size="large" href="/home">INICIO</sl-button>
+          <sl-button size="large" href="/about">NOSOTROS</sl-button>
+          <sl-button size="large" href="/services">SERVICIOS</sl-button>
+          <sl-button size="large" href="/products">PRODUCTOS</sl-button>
+          <sl-button size="large" href="/contact">CONTACTO</sl-button>
         </sl-button-group>
       </header>
-      <main>
-        ${this._renderPage()}
-      </main>
+      <main></main>
     `;
-  }
-
-  _getPageFromUrl() {
-    const path = window.location.pathname;
-    return path === '/' ? 'home' : path.slice(1);
-  }
-
-  _navigate(page) {
-    this.page = page;
-    window.history.pushState({}, '', `/${page}`);
-  }
-
-  _renderPage() {
-    switch (this.page) {
-      case 'home':
-        return html`<home-view></home-view>`;
-      case 'about':
-        return html`<about-view></about-view>`;
-      case 'services':
-        return html`<services-view></services-view>`;
-      case 'products':
-        return html`<products-view></products-view>`;
-      case 'contact':
-        return html`<contact-view></contact-view>`;
-      default:
-        return html`<p>Página no encontrada</p>`;
-    }
   }
 }
 

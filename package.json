@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "lit": "^3.1.4",
-    "@shoelace-style/shoelace": "^2.15.1"
+    "@shoelace-style/shoelace": "^2.15.1",
+    "@vaadin/router": "^1.7.5",
+    "lit": "^3.1.4"
   },
   "devDependencies": {
     "vite": "^5.3.1"
