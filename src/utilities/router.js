@@ -3,7 +3,7 @@ import { Router } from '@vaadin/router';
 export function initRouter(outlet) {
   const router = new Router(outlet);
   router.setRoutes([
-    { path: '/', component: 'home-view' },
+    { path: '/home', component: 'home-view' },
     { path: '/about', component: 'about-view' },
     { path: '/services', component: 'services-view' },
     { path: '/products', component: 'products-view' },
